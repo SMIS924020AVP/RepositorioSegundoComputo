@@ -13,15 +13,19 @@ use App\Http\Controllers\PetController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pet', function () {
-    return view('pet.index');
+Route::get('/pet', function(){
+ return view('pet.index');
 });
 
-//Route::get('pet.create', [PetController::class,'create']);
-*/
+Route::get('/prueba', function(){
+    echo "William Rene Jimenez Guzman hace una prueba";
+   });
+
+//Route::get('create', [PetController::class, "create"]);
+
 Route::resource('pet', PetController::class);
